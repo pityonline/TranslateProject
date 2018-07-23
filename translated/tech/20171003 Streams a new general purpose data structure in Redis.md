@@ -1,7 +1,7 @@
 Streams：一个新的 Redis 通用数据结构
 ======
 
-直到几个月以前，对于我来说，在消息传递的环境中，streams 只是一个有趣且相对简单的概念。这个概念在 Kafka 流行之后，我主要研究它们在 Disque 案例中的效能。Disque 是一个消息队列，它将在 Redis 4.2 中被转换为 Redis 的一个模块。后来我决定用 Disque 来做全部的 AP 消息，也就是说，它将在不需要客户端过多参与的情况下实现容错和保证送达，这样一来，我更加确定地认为 streams 的概念在那种情况下并不适用。
+直到几个月以前，对于我来说，在消息传递的环境中，streams 只是一个有趣且相对简单的概念。这个概念在 Kafka 流行之后，我主要研究它们在 Disque 案例中的应用，Disque 是一个消息队列，它将在 Redis 4.2 中被转换为 Redis 的一个模块。后来我决定让 Disque 都用 AP 消息[1]，也就是说，它将在不需要客户端过多参与的情况下实现容错和可用性，这样一来，我更加确定地认为 streams 的概念在那种情况下并不适用。
 
 然而在那时，在 Redis 中还存在一个问题，那就是缺省情况下导出数据结构并不轻松。在 Redis 列表、有序集和发布/订阅能力之间有某些缺陷。你可以权衡使用这些工具对一系列消息或事件进行建模。
 
@@ -178,3 +178,4 @@ via: http://antirez.com/news/114
 本文由 [LCTT](https://github.com/LCTT/TranslateProject) 原创编译，[Linux中国](https://linux.cn/) 荣誉推出
 
 [a]: http://antirez.com/
+[1]: https://zh.wikipedia.org/wiki/CAP%E5%AE%9A%E7%90%86
